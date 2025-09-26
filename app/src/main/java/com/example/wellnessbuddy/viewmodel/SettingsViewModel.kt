@@ -21,6 +21,9 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
     private val _endMin = MutableLiveData(store.getReminderEndMinutes())
     val endMin: LiveData<Int> = _endMin
 
+    private val _currentWater = MutableLiveData(store.getCurrentWaterIntake())
+    val currentWater: LiveData<Int> = _currentWater
+
     fun setWaterTarget(ml: Int) {
         store.setDailyWaterTargetMl(ml)
         _waterTarget.value = ml
@@ -39,6 +42,16 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
     fun setEnd(minutes: Int) {
         store.setReminderEndMinutes(minutes)
         _endMin.value = minutes
+    }
+
+    fun addWaterIntake(amount: Int) {
+        store.addWaterIntake(amount)
+        _currentWater.value = store.getCurrentWaterIntake()
+    }
+
+    fun resetWaterIntake() {
+        store.resetWaterIntake()
+        _currentWater.value = 0
     }
 }
 

@@ -49,6 +49,8 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.lifecycle.viewmodel)
     implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.coordinatorlayout)
     implementation(libs.androidx.work.ktx)
     implementation(libs.google.gson)
     implementation(libs.mpandroidchart)

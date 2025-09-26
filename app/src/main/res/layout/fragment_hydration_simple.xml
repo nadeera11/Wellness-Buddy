@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hydration Tracker"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        android:textColor="#1F2937"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Simple Progress Display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/tvPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+            android:textColor="#2563EB"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 / 2000 ml"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="#6B7280"/>
+    </LinearLayout>
+
+    <!-- Water Intake Buttons -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Water Intake"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textColor="#374151"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btn50ml"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="+ 50 ml"
+            android:textColor="#1D4ED8"
+            android:backgroundTint="#EFF6FF"/>
+
+        <Button
+            android:id="@+id/btn100ml"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            android:text="+ 100 ml"
+            android:textColor="#1D4ED8"
+            android:backgroundTint="#EFF6FF"/>
+
+        <Button
+            android:id="@+id/btn200ml"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="+ 200 ml"
+            android:textColor="#1D4ED8"
+            android:backgroundTint="#EFF6FF"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btn250ml"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="+ 250 ml"
+            android:textColor="#1D4ED8"
+            android:backgroundTint="#EFF6FF"/>
+
+        <Button
+            android:id="@+id/btn500ml"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="+ 500 ml"
+            android:textColor="#1D4ED8"
+            android:backgroundTint="#EFF6FF"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset Today's Progress"
+        android:textColor="#374151"
+        android:backgroundTint="#FFFFFF"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Settings -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textColor="#374151"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target: 2000ml, Interval: 60min"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="#6B7280"/>
+
+</LinearLayout>

@@ -60,6 +60,20 @@ class PrefsStore(context: Context) {
     fun setReminderEndMinutes(value: Int) {
         prefs.edit().putInt(KEY_WATER_END_MIN, value).apply()
     }
+    
+    fun getCurrentWaterIntake(): Int = prefs.getInt(KEY_CURRENT_WATER, 0)
+    fun setCurrentWaterIntake(value: Int) {
+        prefs.edit().putInt(KEY_CURRENT_WATER, value).apply()
+    }
+    
+    fun addWaterIntake(amount: Int) {
+        val current = getCurrentWaterIntake()
+        setCurrentWaterIntake(current + amount)
+    }
+    
+    fun resetWaterIntake() {
+        setCurrentWaterIntake(0)
+    }
     // endregion
 
     companion object {
@@ -70,6 +84,7 @@ class PrefsStore(context: Context) {
         private const val KEY_WATER_INTERVAL_MIN = "water_interval_min"
         private const val KEY_WATER_START_MIN = "water_start_min"
         private const val KEY_WATER_END_MIN = "water_end_min"
+        private const val KEY_CURRENT_WATER = "current_water"
     }
 }
 

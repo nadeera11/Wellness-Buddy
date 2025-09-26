@@ -1,59 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="12dp">
-
-    <TextView
-        android:id="@+id/tvIcon"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:text="🏃"
-        android:textSize="20sp"
-        android:gravity="center"/>
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="#FFFFFF">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:orientation="vertical"
-        android:paddingStart="12dp">
+        android:padding="16dp">
 
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Habit name"
-            android:textStyle="bold"/>
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
 
-        <TextView
-            android:id="@+id/tvProgress"
-            android:layout_width="wrap_content"
+            <!-- Icon and Name -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏃"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Habit name"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                    android:textColor="#1F2937"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnEdit"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_edit"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_marginEnd="8dp"/>
+
+                <ImageButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_delete"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Progress and Streak Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0/1 today"/>
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Progress Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Progress:"
+                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                    android:textColor="#6B7280"
+                    android:layout_marginEnd="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/layoutProgressCircles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+            </LinearLayout>
+
+            <!-- Streak Section -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Streak:"
+                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                    android:textColor="#6B7280"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvStreak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 days"
+                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                    android:textColor="#F97316"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Mark Complete Button -->
+        <Button
+            android:id="@+id/btnMarkComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Mark Complete"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="#2563EB"
+            android:backgroundTint="#EFF6FF"
+            android:textStyle="bold"
+            app:cornerRadius="8dp"/>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnPlus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"/>
-
-    <Button
-        android:id="@+id/btnEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit"
-        android:layout_marginStart="8dp"/>
-
-    <Button
-        android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Del"
-        android:layout_marginStart="8dp"/>
-
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
 
 
