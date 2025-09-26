@@ -19,6 +19,7 @@
             android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
             android:textColor="#1F2937"
             android:textStyle="bold"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="24dp"/>
 
         <!-- Main Card -->

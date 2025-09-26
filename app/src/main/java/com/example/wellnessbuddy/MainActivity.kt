@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.wellnessbuddy.ui.home.HomeFragment
 import com.example.wellnessbuddy.ui.habits.HabitsFragment
-import com.example.wellnessbuddy.ui.mood.MoodFragment
+import com.example.wellnessbuddy.ui.mood.MoodFragmentTSX
 import com.example.wellnessbuddy.ui.hydration.HydrationFragmentTSX
 import com.example.wellnessbuddy.ui.settings.SettingsFragment
 
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             val fragment: Fragment = when (item.itemId) {
                 R.id.nav_home -> HomeFragment()
                 R.id.nav_habits -> HabitsFragment()
-                R.id.nav_mood -> MoodFragment()
+                R.id.nav_mood -> MoodFragmentTSX()
                 R.id.nav_hydration -> HydrationFragmentTSX()
                 else -> HomeFragment()
             }
