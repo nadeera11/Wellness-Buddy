@@ -8,7 +8,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.wellnessbuddy.ui.home.HomeFragment
 import com.example.wellnessbuddy.ui.habits.HabitsFragment
 import com.example.wellnessbuddy.ui.mood.MoodFragment
-import com.example.wellnessbuddy.ui.hydration.HydrationFragmentBasic
+import com.example.wellnessbuddy.ui.hydration.HydrationFragmentTSX
 import com.example.wellnessbuddy.ui.settings.SettingsFragment
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home -> HomeFragment()
                 R.id.nav_habits -> HabitsFragment()
                 R.id.nav_mood -> MoodFragment()
-                R.id.nav_hydration -> HydrationFragmentBasic()
+                R.id.nav_hydration -> HydrationFragmentTSX()
                 else -> HomeFragment()
             }
             supportFragmentManager.beginTransaction()
