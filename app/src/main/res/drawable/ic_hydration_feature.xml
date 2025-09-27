@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    
+    <!-- Background Circle -->
+    <path
+        android:fillColor="#EFF6FF"
+        android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"/>
+    
+    <!-- Water Droplet -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M24,8 C20,8 16,12 16,18 C16,24 24,32 24,32 C24,32 32,24 32,18 C32,12 28,8 24,8 Z"/>
+    
+    <!-- Highlight -->
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M22,12 C20,12 18,14 18,16 C18,18 22,22 22,22 C22,22 26,18 26,16 C26,14 24,12 22,12 Z"/>
+</vector>

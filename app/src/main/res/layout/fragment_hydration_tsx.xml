@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hydration Tracker"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+            android:textColor="#1F2937"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Main Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Circular Progress -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp">
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:layout_height="160dp">
+
+                        <!-- Background Circle -->
+                        <View
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:background="@drawable/circle_progress_bg"/>
+
+                        <!-- Progress Fill -->
+                        <View
+                            android:id="@+id/progressFill"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:background="@drawable/circle_progress_fill"
+                            android:alpha="0"/>
+
+                        <!-- Center Content -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_droplet"
+                                android:layout_marginBottom="4dp"/>
+
+                            <TextView
+                                android:id="@+id/tvPercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0%"
+                                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                                android:textColor="#1F2937"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="4dp"/>
+
+                            <TextView
+                                android:id="@+id/tvProgress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 / 2000 ml"
+                                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                                android:textColor="#6B7280"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!-- Water Intake Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Water Intake"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textColor="#374151"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Water Amount Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <Button
+                            android:id="@+id/btn50ml"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="4dp"
+                            android:text="+ 50 ml"
+                            android:textColor="#1D4ED8"
+                            android:backgroundTint="#EFF6FF"
+                            android:textSize="12sp"
+                            style="@style/WaterIntakeButton"/>
+
+                        <Button
+                            android:id="@+id/btn100ml"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="4dp"
+                            android:text="+ 100 ml"
+                            android:textColor="#1D4ED8"
+                            android:backgroundTint="#EFF6FF"
+                            android:textSize="12sp"
+                            style="@style/WaterIntakeButton"/>
+
+                        <Button
+                            android:id="@+id/btn200ml"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="4dp"
+                            android:text="+ 200 ml"
+                            android:textColor="#1D4ED8"
+                            android:backgroundTint="#EFF6FF"
+                            android:textSize="12sp"
+                            style="@style/WaterIntakeButton"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <Button
+                            android:id="@+id/btn250ml"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="+ 250 ml"
+                            android:textColor="#1D4ED8"
+                            android:backgroundTint="#EFF6FF"
+                            android:textSize="12sp"
+                            style="@style/WaterIntakeButton"/>
+
+                        <Button
+                            android:id="@+id/btn500ml"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:text="+ 500 ml"
+                            android:textColor="#1D4ED8"
+                            android:backgroundTint="#EFF6FF"
+                            android:textSize="12sp"
+                            style="@style/WaterIntakeButton"/>
+
+                    </LinearLayout>
+
+                    <!-- Reset Button -->
+                    <Button
+                        android:id="@+id/btnReset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Reset Today's Progress"
+                        android:textColor="#374151"
+                        android:backgroundTint="#FFFFFF"
+                        android:strokeColor="#D1D5DB"
+                        android:strokeWidth="1.0"
+                        style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E5E7EB"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Settings Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reminder Settings"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textColor="#374151"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Daily Target -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Daily Target (ml)"
+                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                            android:textColor="#6B7280"
+                            android:layout_marginBottom="4dp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:boxStrokeColor="#D1D5DB"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusBottomEnd="6dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etDailyTarget"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:hint="2000"
+                                android:textSize="14sp"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!-- Reminder Interval -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reminder Interval"
+                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                            android:textColor="#6B7280"
+                            android:layout_marginBottom="4dp"/>
+
+                        <Spinner
+                            android:id="@+id/spinnerInterval"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/spinner_background"/>
+
+                    </LinearLayout>
+
+                    <!-- Time Range -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Start Time"
+                                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                                android:textColor="#6B7280"
+                                android:layout_marginBottom="4dp"/>
+
+                            <Button
+                                android:id="@+id/btnStartTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:text="08:00"
+                                android:textColor="#374151"
+                                android:backgroundTint="#FFFFFF"
+                                android:strokeColor="#D1D5DB"
+                                android:strokeWidth="1.0"
+                                style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="End Time"
+                                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                                android:textColor="#6B7280"
+                                android:layout_marginBottom="4dp"/>
+
+                            <Button
+                                android:id="@+id/btnEndTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:text="22:00"
+                                android:textColor="#374151"
+                                android:backgroundTint="#FFFFFF"
+                                android:strokeColor="#D1D5DB"
+                                android:strokeWidth="1.0"
+                                style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Note -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#FEF3C7"
+                        android:padding="12dp"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Note: Reminders will be sent at your chosen intervals during the specified time range."
+                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                            android:textColor="#92400E"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>
