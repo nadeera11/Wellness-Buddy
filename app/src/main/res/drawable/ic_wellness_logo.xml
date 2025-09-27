@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    
+    <!-- Background Circle -->
+    <path
+        android:fillColor="#EFF6FF"
+        android:pathData="M40,40m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+    
+    <!-- Bicep/Flex Icon -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M25,25 L35,20 L45,25 L50,35 L45,50 L35,55 L25,50 L20,35 Z"/>
+    
+    <!-- Strength Lines -->
+    <path
+        android:fillColor="#F59E0B"
+        android:strokeColor="#F59E0B"
+        android:strokeWidth="2"
+        android:pathData="M30,30 L32,32 M38,30 L40,32 M30,45 L32,47 M38,45 L40,47"/>
+</vector>

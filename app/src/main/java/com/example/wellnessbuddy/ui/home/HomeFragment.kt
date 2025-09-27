@@ -93,6 +93,14 @@ class HomeFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
+        
+        binding.ivProfile.setOnClickListener {
+            // Navigate to profile screen
+            parentFragmentManager.beginTransaction()
+                .replace(com.example.wellnessbuddy.R.id.fragment_container, com.example.wellnessbuddy.ui.profile.ProfileFragment())
+                .addToBackStack(null)
+                .commit()
+        }
     }
 
     private fun updateDate() {

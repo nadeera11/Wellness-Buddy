@@ -1,5 +1,7 @@
 package com.example.wellnessbuddy
 
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -9,11 +11,26 @@ import com.example.wellnessbuddy.ui.home.HomeFragment
 import com.example.wellnessbuddy.ui.habits.HabitsFragment
 import com.example.wellnessbuddy.ui.mood.MoodFragmentTSX
 import com.example.wellnessbuddy.ui.hydration.HydrationFragmentTSX
-import com.example.wellnessbuddy.ui.settings.SettingsFragment
+import com.example.wellnessbuddy.ui.onboarding.OnboardingActivity
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var prefs: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Check if user is logged in
+        prefs = getSharedPreferences("auth_prefs", MODE_PRIVATE)
+        val isLoggedIn = prefs.getBoolean("is_logged_in", false)
+        
+        if (!isLoggedIn) {
+            // User not logged in, go to onboarding
+            val intent = Intent(this, OnboardingActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
+        
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         val bottom = findViewById<BottomNavigationView>(R.id.bottom_nav)
