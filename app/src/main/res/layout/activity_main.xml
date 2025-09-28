@@ -20,7 +20,7 @@
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="#F4F4F4"
         android:elevation="8dp"
         app:menu="@menu/menu_bottom_nav"
         app:itemIconTint="@color/bottom_nav_color"
