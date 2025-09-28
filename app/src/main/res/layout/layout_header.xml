@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="24dp"
+    android:background="#3E61D7"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="24dp">
+
+    <TextView
+        android:id="@+id/tvHeaderTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Wellness Buddy"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/profile_icon_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="6dp"
+        android:src="@drawable/ic_profile" />
+
+</LinearLayout>

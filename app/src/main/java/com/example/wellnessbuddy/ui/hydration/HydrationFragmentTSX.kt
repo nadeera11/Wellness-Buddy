@@ -112,6 +112,15 @@ class HydrationFragmentTSX : Fragment() {
                 }
             }
         }
+        
+        // Access profile icon from included header layout
+        binding.root.findViewById<android.widget.ImageView>(com.example.wellnessbuddy.R.id.ivProfile)?.setOnClickListener {
+            // Navigate to profile screen
+            parentFragmentManager.beginTransaction()
+                .replace(com.example.wellnessbuddy.R.id.fragment_container, com.example.wellnessbuddy.ui.profile.ProfileFragment())
+                .addToBackStack(null)
+                .commit()
+        }
     }
     
     private fun setupSpinner() {
