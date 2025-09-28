@@ -6,6 +6,8 @@
         android:name=".WellnessBuddyApp"
         android:allowBackup="true"
         android:theme="@style/Theme.WellnessBuddy"
+        android:icon="@drawable/logo1"
+        android:label="@string/app_name"
         android:supportsRtl="true">
         <activity
             android:name=".ui.onboarding.OnboardingActivity"

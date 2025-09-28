@@ -50,7 +50,7 @@ class HomeFragment : Fragment() {
             val pct = if (totalHabits == 0) 0 else (completedHabits * 100 / totalHabits).coerceIn(0, 100)
             
             binding.tvHabitsPercent.text = "${pct}%"
-            updateProgressBar(binding.progressHabitsView, pct)
+            updateProgressBar(binding.progressHabitsFill, pct)
         }
 
         // Current mood
@@ -72,16 +72,30 @@ class HomeFragment : Fragment() {
             updateMoodChart(list)
         }
 
-        // Hydration (placeholder - you can implement water tracking later)
+        // Hydration tracking
+        settingsVm.currentWater.observe(viewLifecycleOwner) { current ->
+            val target = settingsVm.waterTarget.value ?: 2000
+            val percentage = if (target > 0) ((current.toFloat() / target) * 100).toInt().coerceIn(0, 100) else 0
+            binding.tvHydrationPercent.text = "${percentage}%"
+            updateProgressBar(binding.progressHydrationFill, percentage)
+        }
+        
         settingsVm.waterTarget.observe(viewLifecycleOwner) { target ->
-            // For now, just show 0% - you can implement actual water intake tracking
-            binding.tvHydrationPercent.text = "0%"
-            updateProgressBar(binding.progressHydrationView, 0)
+            val current = settingsVm.currentWater.value ?: 0
+            val percentage = if (target > 0) ((current.toFloat() / target) * 100).toInt().coerceIn(0, 100) else 0
+            binding.tvHydrationPercent.text = "${percentage}%"
+            updateProgressBar(binding.progressHydrationFill, percentage)
         }
     }
 
     private fun setupClickListeners() {
         binding.btnAddMoodEntry.setOnClickListener {
+            EmojiPickerDialog.show(requireContext()) { emoji ->
+                moodsVm.addMood(System.currentTimeMillis(), emoji, null)
+            }
+        }
+        
+        binding.btnAddMoodEntryEmpty.setOnClickListener {
             EmojiPickerDialog.show(requireContext()) { emoji ->
                 moodsVm.addMood(System.currentTimeMillis(), emoji, null)
             }
@@ -108,24 +122,34 @@ class HomeFragment : Fragment() {
         binding.tvDate.text = dateFormat.format(Date())
     }
 
-    private fun updateProgressBar(progressView: View, percentage: Int) {
-        val params = progressView.layoutParams
-        val parentWidth = (progressView.parent as View).width
-        if (parentWidth > 0) {
-            params.width = (parentWidth * percentage / 100)
-            progressView.layoutParams = params
-        } else {
-            // Delay until parent is measured
-            progressView.post {
-                val parentWidthPost = (progressView.parent as View).width
-                params.width = (parentWidthPost * percentage / 100)
-                progressView.layoutParams = params
+    private fun updateProgressBar(progressFillView: View, percentage: Int) {
+        // Get the parent FrameLayout width
+        val parent = progressFillView.parent as View
+        parent.post {
+            val parentWidth = parent.width
+            if (parentWidth > 0) {
+                val targetWidth = (parentWidth * percentage / 100)
+                val params = progressFillView.layoutParams
+                params.width = targetWidth
+                progressFillView.layoutParams = params
+                
+                // Animate the progress bar
+                android.animation.ValueAnimator.ofInt(0, targetWidth).apply {
+                    duration = 500
+                    addUpdateListener { animation ->
+                        val animatedValue = animation.animatedValue as Int
+                        val animatedParams = progressFillView.layoutParams
+                        animatedParams.width = animatedValue
+                        progressFillView.layoutParams = animatedParams
+                    }
+                    start()
+                }
             }
         }
     }
 
     private fun setupChart() {
-        binding.moodTrendChart.apply {
+        binding.chartMoodTrend.apply {
             description.isEnabled = false
             legend.isEnabled = false
             axisLeft.isEnabled = false
@@ -165,8 +189,8 @@ class HomeFragment : Fragment() {
             setDrawValues(false)
         }
         
-        binding.moodTrendChart.data = LineData(dataSet)
-        binding.moodTrendChart.invalidate()
+        binding.chartMoodTrend.data = LineData(dataSet)
+        binding.chartMoodTrend.invalidate()
     }
 
     override fun onDestroyView() {
