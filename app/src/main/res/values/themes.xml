@@ -2,7 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.WellnessBuddy" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#3E61D7</item>
+        <item name="colorPrimaryContainer">#EFF6FF</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorOnPrimaryContainer">#1E3A8A</item>
     </style>
 
     <style name="Theme.WellnessBuddy" parent="Base.Theme.WellnessBuddy" />
