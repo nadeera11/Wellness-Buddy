@@ -2,8 +2,31 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.WellnessBuddy" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#3E61D7</item>
+        <item name="colorPrimaryContainer">#EFF6FF</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorOnPrimaryContainer">#1E3A8A</item>
     </style>
 
     <style name="Theme.WellnessBuddy" parent="Base.Theme.WellnessBuddy" />
+    
+    <!-- Bottom Navigation Text Styles -->
+    <style name="BottomNavTextActive" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    
+    <style name="BottomNavTextInactive" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    
+    <!-- Water Intake Button Style -->
+    <style name="WaterIntakeButton" parent="Widget.Material3.Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#1D4ED8</item>
+        <item name="android:backgroundTint">#EFF6FF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
 </resources>

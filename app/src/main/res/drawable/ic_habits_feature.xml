@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    
+    <!-- Background Circle -->
+    <path
+        android:fillColor="#EFF6FF"
+        android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"/>
+    
+    <!-- Target Circle -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M24,24m-16,0a16,16 0,1 1,32 0a16,16 0,1 1,-32 0"/>
+    
+    <!-- Inner Circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,24m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"/>
+    
+    <!-- Center Dot -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M24,24m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    
+    <!-- Arrow -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,16 L28,16 L28,12 L32,16 L28,20 L28,16 Z"/>
+</vector>
