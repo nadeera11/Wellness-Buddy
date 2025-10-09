@@ -26,5 +26,16 @@
             android:name=".MainActivity"
             android:exported="false"/>
 
+        <!-- Wellness Widget Provider -->
+        <receiver android:name=".widget.WellnessWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.wellnessbuddy.REFRESH_WIDGET" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/wellness_widget_info" />
+        </receiver>
+
     </application>
 </manifest>
