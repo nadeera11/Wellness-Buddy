@@ -66,7 +66,8 @@ class ProfileFragment : Fragment() {
         val username = prefs.getString("username", "Wellness User") ?: "Wellness User"
         binding.tvUserName.text = username
     }
-    
+
+    // Shared preferences for Logout process
     private fun logout() {
         // Clear login state
         prefs.edit().putBoolean("is_logged_in", false).apply()

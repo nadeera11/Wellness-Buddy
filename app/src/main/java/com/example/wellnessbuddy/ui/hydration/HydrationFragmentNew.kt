@@ -10,14 +10,13 @@ import android.widget.ArrayAdapter
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.wellnessbuddy.databinding.FragmentHydrationTsxBinding
+import com.example.wellnessbuddy.databinding.FragmentHydrationNewBinding
 import com.example.wellnessbuddy.viewmodel.SettingsViewModel
 import com.example.wellnessbuddy.workers.HydrationScheduler
-import java.text.SimpleDateFormat
 import java.util.*
 
-class HydrationFragmentTSX : Fragment() {
-    private var _binding: FragmentHydrationTsxBinding? = null
+class HydrationFragmentNew : Fragment() {
+    private var _binding: FragmentHydrationNewBinding? = null
     private val binding get() = _binding!!
     private val vm: SettingsViewModel by viewModels()
     
@@ -38,7 +37,7 @@ class HydrationFragmentTSX : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHydrationTsxBinding.inflate(inflater, container, false)
+        _binding = FragmentHydrationNewBinding.inflate(inflater, container, false)
         
         initializeViews()
         setupObservers()

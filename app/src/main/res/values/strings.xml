@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Wellness Buddy</string>
+    <string name="widget_description">Track your daily wellness progress including habits, mood, and hydration</string>
 </resources>

@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.wellnessbuddy.data.PrefsStore
+import com.example.wellnessbuddy.widget.WellnessWidgetProvider
 
 class SettingsViewModel(application: Application) : AndroidViewModel(application) {
     private val store = PrefsStore(application)
@@ -47,11 +48,15 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
     fun addWaterIntake(amount: Int) {
         store.addWaterIntake(amount)
         _currentWater.value = store.getCurrentWaterIntake()
+        // Update widget when water intake changes
+        WellnessWidgetProvider.refreshAllWidgets(getApplication())
     }
 
     fun resetWaterIntake() {
         store.resetWaterIntake()
         _currentWater.value = 0
+        // Update widget when water intake changes
+        WellnessWidgetProvider.refreshAllWidgets(getApplication())
     }
 }
 
