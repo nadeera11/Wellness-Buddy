@@ -13,6 +13,7 @@ import androidx.fragment.app.viewModels
 import com.example.wellnessbuddy.databinding.FragmentHydrationNewBinding
 import com.example.wellnessbuddy.viewmodel.SettingsViewModel
 import com.example.wellnessbuddy.workers.HydrationScheduler
+import com.example.wellnessbuddy.ui.widgets.CircularProgressView
 import java.util.*
 
 class HydrationFragmentNew : Fragment() {
@@ -170,24 +171,8 @@ class HydrationFragmentNew : Fragment() {
         binding.tvPercentage.text = "${percentage}%"
         binding.tvProgress.text = "$current / $target ml"
         
-        // Animate circular progress
-        animateCircularProgress(percentage)
-    }
-    
-    private fun animateCircularProgress(percentage: Int) {
-        val progressView = binding.progressFill
-        
-        // Create a simple animation for the progress fill
-        val animator = ValueAnimator.ofFloat(0f, percentage / 100f)
-        animator.duration = 500
-        animator.addUpdateListener { animation ->
-            val animatedValue = animation.animatedValue as Float
-            progressView.alpha = animatedValue
-            
-            // Create a simple progress effect by scaling the view
-            progressView.scaleY = animatedValue
-        }
-        animator.start()
+        // Update circular progress view
+        binding.circularProgressView.setProgress(percentage.toFloat(), animate = true)
     }
     
     private fun updateTimeDisplay(minutes: Int, isStartTime: Boolean) {
