@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors (60% - Main brand colors) -->
+    <color name="primary">#3E61D7</color>
+    <color name="primary_variant">#1E3A8A</color>
+    <color name="primary_container">#EFF6FF</color>
+    <color name="primary_light">#DBEAFE</color>
+    <color name="primary_dark">#1D4ED8</color>
+    <color name="primary_blue">#2563EB</color>
+
+    <!-- Secondary Colors (30% - Supporting colors) -->
+    <color name="secondary_cyan">#06B6D4</color>
+    <color name="secondary_green">#10B981</color>
+    <color name="secondary_green_light">#ECFDF5</color>
+    <color name="secondary_blue">#3B82F6</color>
+    <color name="secondary_orange">#F97316</color>
+
+    <!-- Accent Colors (10% - Highlights and CTAs) -->
+    <color name="accent_red">#EF4444</color>
+    <color name="accent_purple_light">#E0D2FF</color>
+    <color name="accent_blue_gradient">#208AE0</color>
+
+    <!-- Background Colors -->
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_secondary">#F9FAFB</color>
+    <color name="background_tertiary">#F5F5F5</color>
+    <color name="background_hydration">#F1F9FF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#374151</color>
+    <color name="text_tertiary">#6B7280</color>
+    <color name="text_quaternary">#9CA3AF</color>
+    <color name="text_black">#000104</color>
+
+    <!-- Border and Divider Colors -->
+    <color name="border_primary">#D1D5DB</color>
+    <color name="border_secondary">#E5E7EB</color>
+    <color name="stroke_dark">#40000000</color>
+
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
 </resources>
