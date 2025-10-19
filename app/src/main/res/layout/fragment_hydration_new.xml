@@ -59,19 +59,11 @@
                         android:layout_width="160dp"
                         android:layout_height="160dp">
 
-                        <!-- Background Circle -->
-                        <View
+                        <!-- Custom Circular Progress View -->
+                        <com.example.wellnessbuddy.ui.widgets.CircularProgressView
+                            android:id="@+id/circularProgressView"
                             android:layout_width="160dp"
-                            android:layout_height="160dp"
-                            android:background="@drawable/circle_progress_bg"/>
-
-                        <!-- Progress Fill -->
-                        <View
-                            android:id="@+id/progressFill"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
-                            android:background="@drawable/circle_progress_fill"
-                            android:alpha="0"/>
+                            android:layout_height="160dp"/>
 
                         <!-- Center Content -->
                         <LinearLayout
@@ -102,7 +94,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="0 / 2000 ml"
                                 android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                                android:textColor="#6B7280"/>
+                                android:textColor="#000104"/>
 
                         </LinearLayout>
 
@@ -364,22 +356,22 @@
                     </LinearLayout>
 
                     <!-- Note -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="#FEF3C7"
-                        android:padding="12dp"
-                        android:layout_marginTop="16dp">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:background="#FEF3C7"-->
+<!--                        android:padding="12dp"-->
+<!--                        android:layout_marginTop="16dp">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Note: Reminders will be sent at your chosen intervals during the specified time range."
-                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                            android:textColor="#92400E"/>
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Note: Reminders will be sent at your chosen intervals during the specified time range."-->
+<!--                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"-->
+<!--                            android:textColor="#92400E"/>-->
 
-                    </LinearLayout>
+<!--                    </LinearLayout>-->
 
                 </LinearLayout>
 

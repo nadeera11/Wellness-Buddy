@@ -10,10 +10,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.wellnessbuddy.ui.home.HomeFragment
 import com.example.wellnessbuddy.ui.habits.HabitsFragment
 import com.example.wellnessbuddy.ui.mood.MoodFragmentTSX
-import com.example.wellnessbuddy.ui.hydration.HydrationFragmentTSX
+import com.example.wellnessbuddy.ui.hydration.HydrationFragmentNew
 import com.example.wellnessbuddy.ui.onboarding.OnboardingActivity
 
 class MainActivity : AppCompatActivity() {
+    // Getting SharedPreferences instance
     private lateinit var prefs: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home -> HomeFragment()
                 R.id.nav_habits -> HabitsFragment()
                 R.id.nav_mood -> MoodFragmentTSX()
-                R.id.nav_hydration -> HydrationFragmentTSX()
+                R.id.nav_hydration -> HydrationFragmentNew()
                 else -> HomeFragment()
             }
             supportFragmentManager.beginTransaction()

@@ -31,6 +31,7 @@ class AuthActivity : AppCompatActivity() {
         }
     }
 
+    //Preferences using for login
     private fun performLogin() {
         val username = binding.etUsername.text?.toString()?.trim()
         val password = binding.etPassword.text?.toString()?.trim()
