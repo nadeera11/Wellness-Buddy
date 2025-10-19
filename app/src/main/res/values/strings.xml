@@ -1,4 +1,137 @@
 <resources>
+    <!-- App Name -->
     <string name="app_name">Wellness Buddy</string>
+    
+    <!-- Widget -->
     <string name="widget_description">Track your daily wellness progress including habits, mood, and hydration</string>
+    <string name="widget_title">Wellness Progress</string>
+    <string name="widget_tap_to_open">Tap to open app</string>
+    <string name="widget_today">Today</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_habits">Habits</string>
+    <string name="nav_mood">Mood</string>
+    <string name="nav_water">Water</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Welcome to Wellness Buddy</string>
+    <string name="onboarding_subtitle">Your personal companion for tracking habits, mood, and hydration.</string>
+    <string name="onboarding_feature_habits_title">Track Your Habits</string>
+    <string name="onboarding_feature_habits_desc">Build consistency with daily habit tracking</string>
+    <string name="onboarding_feature_mood_title">Monitor Your Mood</string>
+    <string name="onboarding_feature_mood_desc">Log your emotions and identify patterns</string>
+    <string name="onboarding_feature_hydration_title">Stay Hydrated</string>
+    <string name="onboarding_feature_hydration_desc">Track water intake and set reminders</string>
+    <string name="onboarding_get_started">Get Started</string>
+    
+    <!-- Authentication -->
+    <string name="auth_welcome">Welcome</string>
+    <string name="auth_subtitle">Sign in or create a new account</string>
+    <string name="auth_username">Username</string>
+    <string name="auth_username_hint">Enter your username</string>
+    <string name="auth_password">Password</string>
+    <string name="auth_password_hint">Enter your password</string>
+    <string name="auth_register">Register</string>
+    <string name="auth_login">Login</string>
+    
+    <!-- Home Fragment -->
+    <string name="home_welcome">Welcome to Wellness Buddy</string>
+    <string name="home_subtitle">Track your habits, mood, and hydration</string>
+    <string name="home_today_progress">Today\'s Progress</string>
+    <string name="home_date_format">Sunday, Sep 28</string>
+    <string name="home_habits">Habits</string>
+    <string name="home_hydration">Hydration</string>
+    <string name="home_completed">completed</string>
+    <string name="home_of_goal">of goal</string>
+    <string name="home_current_mood">Current Mood</string>
+    <string name="home_no_notes">No notes</string>
+    <string name="home_add_entry">Add Entry</string>
+    <string name="home_no_mood_today">No mood logged today</string>
+    <string name="home_mood_trends">Mood Trends</string>
+    <string name="home_view_all">View All</string>
+    
+    <!-- Habits Fragment -->
+    <string name="habits_title">Habit Tracker</string>
+    <string name="habits_empty_message">You haven\'t added any habits yet.</string>
+    <string name="habits_add_first">Add Your First Habit</string>
+    <string name="habits_progress">Progress:</string>
+    <string name="habits_streak">Streak:</string>
+    <string name="habits_days">days</string>
+    <string name="habits_mark_complete">Mark Complete</string>
+    
+    <!-- Habit Dialog -->
+    <string name="habit_dialog_name_hint">Habit name</string>
+    <string name="habit_dialog_emoji_hint">Emoji (e.g., 🏃)</string>
+    <string name="habit_dialog_target_hint">Daily target</string>
+    
+    <!-- Mood Fragment -->
+    <string name="mood_title">Mood Journal</string>
+    <string name="mood_add">Add Mood</string>
+    <string name="mood_empty_message">No mood entries yet</string>
+    <string name="mood_empty_subtitle">Tap the + button to add your first mood entry</string>
+    <string name="mood_calendar_title">December 2024</string>
+    <string name="mood_delete">Del</string>
+    
+    <!-- Mood Dialog -->
+    <string name="mood_dialog_title">Add Mood Entry</string>
+    <string name="mood_dialog_close">✕</string>
+    <string name="mood_dialog_question">How are you feeling?</string>
+    <string name="mood_dialog_note_title">Add a note (optional)</string>
+    <string name="mood_dialog_note_hint">How was your day?</string>
+    <string name="mood_dialog_cancel">Cancel</string>
+    <string name="mood_dialog_save">Save</string>
+    
+    <!-- Mood History Item -->
+    <string name="mood_history_placeholder_time">Today, 2:30 PM</string>
+    <string name="mood_history_placeholder_note">Feeling great today!</string>
+    
+    <!-- Hydration Fragment -->
+    <string name="hydration_title">Hydration Tracker</string>
+    <string name="hydration_progress_format">0 / 2000 ml</string>
+    <string name="hydration_add_water">Add Water Intake</string>
+    <string name="hydration_50ml">+ 50 ml</string>
+    <string name="hydration_100ml">+ 100 ml</string>
+    <string name="hydration_200ml">+ 200 ml</string>
+    <string name="hydration_250ml">+ 250 ml</string>
+    <string name="hydration_500ml">+ 500 ml</string>
+    <string name="hydration_reset">Reset Today\'s Progress</string>
+    <string name="hydration_reminder_settings">Reminder Settings</string>
+    <string name="hydration_daily_target">Daily Target (ml)</string>
+    <string name="hydration_target_hint">2000</string>
+    <string name="hydration_reminder_interval">Reminder Interval</string>
+    <string name="hydration_start_time">Start Time</string>
+    <string name="hydration_end_time">End Time</string>
+    <string name="hydration_time_start_default">08:00</string>
+    <string name="hydration_time_end_default">22:00</string>
+    <string name="hydration_note">Note: Reminders will be sent at your chosen intervals during the specified time range.</string>
+    <string name="hydration_web_note">Note: This web app can only show reminders when it\'s open. For real notifications, you would need a native Android app.</string>
+    
+    <!-- Profile Fragment -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_name">Wellness User</string>
+    <string name="profile_bio">Working on my wellness journey</string>
+    <string name="profile_your_progress">Your Progress</string>
+    <string name="profile_habits_count">Habits</string>
+    <string name="profile_mood_entries">Mood Entries</string>
+    <string name="profile_water_today">Water Today</string>
+    <string name="profile_account_actions">Account Actions</string>
+    <string name="profile_logout">Logout &amp; Reset</string>
+    
+    <!-- Common -->
+    <string name="common_percentage">0%</string>
+    <string name="common_emoji_happy">😊</string>
+    <string name="common_emoji_runner">🏃</string>
+    <string name="common_zero">0</string>
+    <string name="common_empty_string"></string>
+    <string name="common_nav_previous">‹</string>
+    <string name="common_nav_next">›</string>
+    
+    <!-- Format Strings -->
+    <string name="format_days_count">%1$d days</string>
+    <string name="format_water_ml">%1$dml</string>
+    <string name="format_percentage">%1$d%%</string>
+    <string name="format_fraction">%1$d/%2$d</string>
+    <string name="format_water_fraction">%1$d/%2$dml</string>
+    <string name="format_count">(%1$d)</string>
 </resources>
